@@ -47,7 +47,7 @@ jobs:
            -var "client_id=${{ secrets.ARM_CLIENT_ID }}" \
            -var "client_secret=${{ secrets.ARM_CLIENT_SECRET }}" \
            -var "tenant_id=${{ secrets.ARM_TENANT_ID }}" \
-           -var "subscription_id=${{ secrets.ARM_SUBSCRIPTION_ID }}" \
+           -var "subscription_id=${{vars.ARM_SUBSCRIPTION_ID }}" \
            -var "admin_password=${{ secrets.VM_ADMIN_PASSWORD }}"
 
       - name: Run terraform apply
@@ -57,7 +57,7 @@ jobs:
            -var "client_id=${{ secrets.ARM_CLIENT_ID }}" \
            -var "client_secret=${{ secrets.ARM_CLIENT_SECRET }}" \
            -var "tenant_id=${{ secrets.ARM_TENANT_ID }}" \
-           -var "subscription_id=${{ secrets.ARM_SUBSCRIPTION_ID }}" \
+           -var "subscription_id=${{ vars.ARM_SUBSCRIPTION_ID }}" \
            -var "admin_password=${{ secrets.VM_ADMIN_PASSWORD }}"
 
       # Runs a set of commands using the runners shell
