@@ -35,10 +35,6 @@ jobs:
       - uses: hashicorp/setup-terraform@v3
         name: Setup Terraform
 
-      # Runs a single command using the runners shell
-      #- name: Change directory to terraform project
-      # run: cd terraform
-
       - name: Run terraform init
         run: |
           cd terraform
