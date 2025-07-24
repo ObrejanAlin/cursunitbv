@@ -24,7 +24,7 @@ jobs:
       ARM_CLIENT_ID: ${{secrets.ARM_CLIENT_ID}}
       ARM_CLIENT_SECRET: ${{secrets.ARM_CLIENT_SECRET}}
       ARM_TENANT_ID: ${{secrets.ARM_TENANT_ID}}
-      ARM_SUBSCRIPTION_ID: ${{vars.ARM_SUBSCRIPTION_ID}}
+      ARM_SUBSCRIPTION_ID: ${{secrets.ARM_SUBSCRIPTION_ID}}
       VM_ADMIN_PASSWORD: ${{secrets.VM_ADMIN_PASSWORD}}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -47,7 +47,7 @@ jobs:
            -var "client_id=${{ secrets.ARM_CLIENT_ID }}" \
            -var "client_secret=${{ secrets.ARM_CLIENT_SECRET }}" \
            -var "tenant_id=${{ secrets.ARM_TENANT_ID }}" \
-           -var "subscription_id=${{vars.ARM_SUBSCRIPTION_ID }}" \
+           -var "subscription_id=${{secrets.ARM_SUBSCRIPTION_ID }}" \
            -var "admin_password=${{ secrets.VM_ADMIN_PASSWORD }}"
 
       - name: Run terraform apply
@@ -57,7 +57,7 @@ jobs:
            -var "client_id=${{ secrets.ARM_CLIENT_ID }}" \
            -var "client_secret=${{ secrets.ARM_CLIENT_SECRET }}" \
            -var "tenant_id=${{ secrets.ARM_TENANT_ID }}" \
-           -var "subscription_id=${{ vars.ARM_SUBSCRIPTION_ID }}" \
+           -var "subscription_id=${{ secrets.ARM_SUBSCRIPTION_ID }}" \
            -var "admin_password=${{ secrets.VM_ADMIN_PASSWORD }}"
 
       # Runs a set of commands using the runners shell
