@@ -6,7 +6,7 @@ name: Github actions workflow to apply terraform plan
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "github_tf" ]
+    branches: [ "tema" ]
   #pull_request:
    # branches: [ "main" ]
  

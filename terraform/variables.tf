@@ -20,7 +20,7 @@ variable "subscription_id" {
 
 variable "vm_count" {
   type    = number
-  default = 2
+  default = 2  
 }
   
 variable "vm_size" {
