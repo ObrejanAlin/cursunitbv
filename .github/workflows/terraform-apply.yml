@@ -43,7 +43,7 @@ jobs:
       - name: Run terraform plan
         run: |
           cd terraform
-          terraform plan -var "admin_password=${{ secrets.VM_ADMIN_PASSWORD }}"
+          terraform plan -input=false -var "admin_password=${{ secrets.VM_ADMIN_PASSWORD }}"
 
       - name: Run terraform apply
         run: |
